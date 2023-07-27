@@ -22,3 +22,13 @@ export interface BooksResult {
   previous: string;
   results: Array<Book>;
 }
+
+export const BookFormats = [
+  { mimeType: "application/epub+zip", name: "EPUB" },
+  { mimeType: "application/octet-stream", name: "BINARY" },
+  { mimeType: "application/rdf+xml", name: "RDF" },
+  { mimeType: "application/x-mobipocket-ebook", name: "MOBI" },
+  { mimeType: "text/html", name: "HTML" },
+  { mimeType: "text/plain", name: "TEXT" },
+  { mimeType: "text/plain; charset=us-ascii", name: "TEXT ASCII" },
+];
