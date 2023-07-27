@@ -8,8 +8,8 @@ export default function Home() {
             alt="static page"
             className="object-cover w-full h-48 md:h-auto"
           />
-          <div className="text-lg font-bold text-blue-900 p-4">
-            <span className="group-hover:underline">List of Companies</span>
+          <div className="text-lg font-bold  p-4">
+            <span className="group-hover:underline text-blue-950">List of Companies</span>
             <div className="text-sm font-normal">Static</div>
           </div>
         </a>
@@ -20,9 +20,9 @@ export default function Home() {
             alt="static page"
             className="object-cover w-full h-48 md:h-auto"
           />
-          <div className="text-lg font-bold text-blue-900 p-4">
-            <span className="group-hover:underline">Project Gutenburg Books</span>
-            <div className="text-sm font-normal">Dyanmic</div>
+          <div className="text-lg font-bold  p-4">
+            <span className="group-hover:underline text-blue-950">Project Gutenburg Books</span>
+            <div className="text-sm font-normal">Dynamic</div>
           </div>
         </a>
       </div>
