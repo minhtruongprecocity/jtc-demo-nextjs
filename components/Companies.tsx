@@ -20,7 +20,7 @@ export function Companies({ title, data: companies, altLinkTitle, altLinkRoute }
     <>
       <div className="flex items-center mb-4 justify-end flex-row">
         <h1 className="text-2xl font-bold flex-1">{title}</h1>
-        <a href={altLinkRoute} className="hover:underline mr-5 text-blue-950">
+        <a href={altLinkRoute} className="hover:underline mr-0 text-blue-950 sm:mr-5">
           {altLinkTitle}
         </a>
         <Toggle
