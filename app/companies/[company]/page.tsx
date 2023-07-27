@@ -1,4 +1,5 @@
 import { cms } from "@/api/cms";
+import { Container } from "@/components/Container";
 import { Currency } from "@/components/Currency";
 import { toCompany } from "@/types/Company";
 import { Metadata } from "next";
@@ -39,7 +40,7 @@ export default async function Page({ params }: Props) {
   const data = await getCompany(params.company);
 
   return (
-    <div className="container mx-auto p-5">
+    <Container>
       <a href="/companies" className="mb-4 py-2 block text-blue-950">
         &lt; <span className="hover:underline">Back</span>
       </a>
@@ -78,6 +79,6 @@ export default async function Page({ params }: Props) {
           <div>{data.contactPhone}</div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }

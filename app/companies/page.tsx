@@ -1,5 +1,6 @@
 import { cms } from "@/api/cms";
 import { Companies } from "@/components/Companies";
+import { Container } from "@/components/Container";
 import { toCompanies } from "@/types/Company";
 import { Metadata } from "next";
 
@@ -23,8 +24,8 @@ export default async function Page() {
   const companies = await getCompanies();
 
   return (
-    <div className="container mx-auto p-5">
+    <Container>
       <Companies data={companies} />
-    </div>
+    </Container>
   );
 }

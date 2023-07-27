@@ -2,6 +2,7 @@
 
 import { getBooks, getBooksWithUrl } from "@/api/books";
 import { BooksTable } from "@/components/BooksTable";
+import { Container } from "@/components/Container";
 import { BooksResult } from "@/types/Book";
 import Head from "next/head";
 import { useEffect, useState } from "react";
@@ -29,17 +30,10 @@ export default function Page() {
     getData();
   }, []);
 
-  if (loading)
-    return (
-      <>
-        <div className="container mx-auto p-5">
-          <h1>Loading...</h1>
-        </div>
-      </>
-    );
+  if (loading) return <h1 className="text-lg">Loading...</h1>;
 
   return (
-    <div className="container mx-auto p-5">
+    <Container>
       {books ? (
         <h1>
           <div className="flex flex-row gap-4 justify-end">
@@ -69,6 +63,6 @@ export default function Page() {
           </div>
         </h1>
       ) : null}
-    </div>
+    </Container>
   );
 }
