@@ -10,7 +10,7 @@ export default function Home() {
           />
           <div className="text-lg font-bold text-blue-900 p-4">
             <span className="group-hover:underline">List of Companies</span>
-            <div className="text-sm font-normal">Static Page</div>
+            <div className="text-sm font-normal">Static</div>
           </div>
         </a>
 
