@@ -14,8 +14,8 @@ async function getCompanies() {
       filter: {
         type: "company",
       },
-      page: { limit: 10 },
-      order_by: "annual_sales_DESC",
+      page: { limit: 100 },
+      order_by: "name_ASC",
     })) ?? [];
   return toCompanies(resp);
 }
@@ -25,7 +25,7 @@ export default async function Page() {
 
   return (
     <Container>
-      <Companies title="Top 10 - Annual Sales" data={companies} altLinkRoute="/companies/all" altLinkTitle="View All" />
+      <Companies title="All Companies" data={companies} altLinkRoute="/companies" altLinkTitle="View Top 10" />
     </Container>
   );
 }

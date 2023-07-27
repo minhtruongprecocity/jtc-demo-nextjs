@@ -1,4 +1,5 @@
 import { cms } from "@/api/cms";
+import { BackButton } from "@/components/BackButton";
 import { Container } from "@/components/Container";
 import { Currency } from "@/components/Currency";
 import { toCompany } from "@/types/Company";
@@ -41,9 +42,7 @@ export default async function Page({ params }: Props) {
 
   return (
     <Container>
-      <a href="/companies" className="mb-4 py-2 block text-blue-950">
-        &lt; <span className="hover:underline">Back</span>
-      </a>
+      <BackButton />
 
       <div className="flex gap-4">
         <div className="w-full">
