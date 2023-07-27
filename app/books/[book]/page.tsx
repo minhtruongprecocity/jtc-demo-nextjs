@@ -37,7 +37,7 @@ export default function Page({ params }: { params: { book: string } }) {
         <>
           <BackButton />
 
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-col items-center gap-10 sm:flex-row sm:items-start">
             <img
               src={book.formats["image/jpeg"]}
               alt={`${book.title} cover`}
