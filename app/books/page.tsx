@@ -4,7 +4,6 @@ import { getBooks, getBooksWithUrl } from "@/api/books";
 import { BooksTable } from "@/components/BooksTable";
 import { Container } from "@/components/Container";
 import { BooksResult } from "@/types/Book";
-import Head from "next/head";
 import { useEffect, useState } from "react";
 
 export default function Page() {

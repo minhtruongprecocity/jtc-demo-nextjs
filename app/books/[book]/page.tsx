@@ -47,7 +47,9 @@ export default function Page({ params }: { params: { book: string } }) {
               <div className="mb-5">
                 <div className="text-2xl font-bold">{book.title}</div>
                 {book.authors?.map((author) => (
-                  <div className="text-md">{author.name}</div>
+                  <div key={author.name} className="text-md">
+                    {author.name}
+                  </div>
                 ))}
               </div>
 
@@ -59,7 +61,9 @@ export default function Page({ params }: { params: { book: string } }) {
               <div className="mb-5">
                 <div className="font-bold">Subjects</div>
                 {book.subjects?.map((subject) => (
-                  <div className="">{subject}</div>
+                  <div key={subject} className="">
+                    {subject}
+                  </div>
                 ))}
               </div>
 
