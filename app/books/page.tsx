@@ -30,7 +30,12 @@ export default function Page() {
     getData();
   }, []);
 
-  if (loading) return <h1 className="text-lg">Loading...</h1>;
+  if (loading)
+    return (
+      <Container>
+        <h1 className="text-lg">Loading...</h1>
+      </Container>
+    );
 
   return (
     <Container>
