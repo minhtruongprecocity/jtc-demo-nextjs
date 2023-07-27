@@ -25,7 +25,7 @@ export default async function Page() {
 
   return (
     <Container>
-      <Companies title="Top 10 - Annual Sales" data={companies} altLinkRoute="/companies/all" altLinkTitle="View All" />
+      <Companies title="Top 10" data={companies} altLinkRoute="/companies/all" altLinkTitle="View All" />
     </Container>
   );
 }
