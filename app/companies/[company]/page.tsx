@@ -3,7 +3,7 @@ import { Currency } from "@/components/Currency";
 import { toCompany } from "@/types/Company";
 import { Metadata } from "next";
 
-export async function getCompany(id: string) {
+async function getCompany(id: string) {
   return toCompany(await cms.items.find(id));
 }
 

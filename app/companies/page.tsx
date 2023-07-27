@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Companies",
 };
 
-export async function getCompanies() {
+async function getCompanies() {
   const resp =
     (await cms.items.list({
       filter: {
