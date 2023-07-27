@@ -9,6 +9,7 @@ export function BooksTable({ books }: Props) {
     <div className="grid gap-5 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 shadow-sm">
       {books.map((book) => (
         <Link
+          key={book.id}
           href={`/books/${book.id}`}
           className="flex flex-row items-start justify-start gap-4 bg-white p-4 shadow-sm hover:bg-gray-50"
         >
