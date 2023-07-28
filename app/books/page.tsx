@@ -3,6 +3,7 @@
 import { getBooks, getBooksWithUrl } from "@/api/books";
 import { BooksTable } from "@/components/BooksTable";
 import { Container } from "@/components/Container";
+import { Pagination } from "@/components/Pagination";
 import { BooksResult } from "@/types/Book";
 import { useEffect, useState } from "react";
 
@@ -39,33 +40,11 @@ export default function Page() {
   return (
     <Container>
       {books ? (
-        <h1>
-          <div className="flex flex-row gap-4 justify-end">
-            <button
-              onClick={() => changePage(books.previous)}
-              className="p-4 hover:underline disabled:opacity-50 disabled:hover:no-underline"
-              disabled={!books.previous}
-            >
-              Prev
-            </button>
-            <button onClick={() => changePage(books.next)} className="p-4 hover:underline" disabled={!books.next}>
-              Next
-            </button>
-          </div>
+        <>
+          <Pagination prevUrl={books.previous} nextUrl={books.next} changePage={changePage} />
           <BooksTable books={books.results} />
-          <div className="flex flex-row gap-4 justify-end">
-            <button
-              onClick={() => changePage(books.previous)}
-              className="p-4 hover:underline disabled:opacity-50 disabled:hover:no-underline"
-              disabled={!books.previous}
-            >
-              Prev
-            </button>
-            <button onClick={() => changePage(books.next)} className="p-4 hover:underline" disabled={!books.next}>
-              Next
-            </button>
-          </div>
-        </h1>
+          <Pagination prevUrl={books.previous} nextUrl={books.next} changePage={changePage} />
+        </>
       ) : null}
     </Container>
   );
